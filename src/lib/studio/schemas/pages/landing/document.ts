@@ -12,7 +12,7 @@ const landingPage = defineType({
     defineField({
       name: 'sections',
       type: 'array',
-      validation: (Rule) => Rule.required().min(),
+      validation: (Rule) => Rule.required().min(1),
       of: [{ type: 'landing.hero' }],
     }),
   ],
