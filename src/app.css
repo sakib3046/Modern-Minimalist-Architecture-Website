@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  font-family: "Space Grotesk", sans-serif;
+}
+
+
+@layer components{
+    .mobileScreenAboutParagraph{
+        @apply text-[1.25rem] leading-[1.25rem] font-[400]
+    }
+    .mdxlScreenHeading{
+        @apply text-[1.75rem] leading-[2.625rem] font-[400]
+        }
+    .mdxlScreenAbout{
+        @apply text-[1.25rem] leading-[1.875rem] font-[400]
+    }
+    .mdxlScreenTestimonial{
+        @apply text-[1.5rem] leading-[2.25rem] font-[400]
+    }
+
+}
+
 
 @layer base {
 }
