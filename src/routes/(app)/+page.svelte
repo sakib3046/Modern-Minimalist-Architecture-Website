@@ -1,5 +1,10 @@
 <script>
-    import Hero from "../../lib/components/pages/landing/hero/Hero.svelte";
-</script>
+  import Header from "../../lib/components/pages/landing/hero/Header.svelte";
+  export let data;
+//   console.log(data)
 
-<Hero/>
+</script>
+<div class="">
+    
+    <Header HeaderData={data.page.headerSections[0]}/>
+</div>

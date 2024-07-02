@@ -1,4 +1,4 @@
 import landingPage from './document';
-import hero from './hero.tsx';
+import header from './header';
 
-export default [landingPage, hero];
+export default [landingPage, header];
