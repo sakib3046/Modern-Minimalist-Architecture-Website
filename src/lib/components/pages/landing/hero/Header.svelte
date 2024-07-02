@@ -1,5 +1,4 @@
 <script lang='ts'>
 export let HeaderData;
-console.log(HeaderData) 
+console.log('') 
 </script>
-<h1>{HeaderData.headerImageText}</h1>

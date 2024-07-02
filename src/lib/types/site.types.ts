@@ -5,7 +5,7 @@ export interface SiteDataProps {
   logos: {
     favicon: SanityImageWithAlt;
     ogImage: SanityImageWithAlt;
-    logo: SanityImageWithAlt;
+    logoText: string;
   };
   nav: Nav;
   footer: Footer;

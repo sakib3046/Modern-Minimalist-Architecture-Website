@@ -1,17 +1,18 @@
 <script lang="ts">
   import { urlFor } from '$lib/sanity/sanity-client';
   import type { LayoutData } from './$types';
-
+  import Navbar from "../../lib/components/pages/landing/hero/Navbar.svelte";
   export let data: LayoutData;
   $: ({
     site: {
-      logos: { logo, favicon },
+      logos: { logoText, favicon },
     },
   } = data);
 
   let faviconImage = favicon
     ? urlFor(favicon).size(256, 256).ignoreImageParams().url()
     : null;
+    $:console.log(logoText)
 </script>
 
 <svelte:head>
@@ -21,3 +22,6 @@
 <main class="overflow-hidden">
   <slot />
 </main>
+<div class="w-screen min-h-[3.375rem] md:min-h-[6.5rem]">
+  <Navbar/>
+</div>

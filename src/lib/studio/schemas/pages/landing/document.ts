@@ -10,10 +10,10 @@ const landingPage = defineType({
       type: 'seo',
     }),
     defineField({
-      name: 'headerSections',
+      name: 'sections',
       type: 'array',
       validation: (Rule) => Rule.required().min(1),
-      of: [{ type: 'landing.header' }],
+      of: [{ type: 'landing.header' },{type:'landing.project'}],
     }),
   ],
   preview: {
