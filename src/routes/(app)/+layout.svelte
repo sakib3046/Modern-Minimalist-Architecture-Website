@@ -12,7 +12,7 @@
   let faviconImage = favicon
     ? urlFor(favicon).size(256, 256).ignoreImageParams().url()
     : null;
-    $:console.log(logoText)
+    // $:console.log(logoText)
 </script>
 
 <svelte:head>
@@ -20,8 +20,10 @@
 </svelte:head>
 
 <main class="overflow-hidden">
-  <slot />
+
 </main>
 <div class="w-screen min-h-[3.375rem] md:min-h-[6.5rem]">
   <Navbar/>
 </div>
+
+<slot />

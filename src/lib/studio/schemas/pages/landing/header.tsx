@@ -9,7 +9,7 @@ const header = defineType({
   icon: SiHomeadvisor,
   fields: [
     defineField({
-      name: 'headerImageText',
+      name: 'sliderImageText',
       type: 'array',
       validation: (Rule) => Rule.required(),
       of: [defineArrayMember({ type: 'text' })],
@@ -20,6 +20,13 @@ const header = defineType({
       validation: (Rule) => Rule.required(),
       of: [defineArrayMember({ type: 'block' })],
     }),
+    defineField({
+      name: 'sliderImage',
+      type: 'array',
+      validation: (Rule) => Rule.required(),
+      of: [defineArrayMember({ type: 'image' })],
+    }),
+    
     
     // defineField({
     //   name: 'subtitle',
