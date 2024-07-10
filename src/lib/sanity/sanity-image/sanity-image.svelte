@@ -12,7 +12,7 @@
     isSanityImageWithLqip,
   } from './fns';
   import type { AutoWidths, SanityImageProps } from './types';
-  import { cn } from '$lib/utils/cn';
+  import { cn } from '$lib/utils/helpers';
 
   type $$Props = SanityImageProps &
     Omit<HTMLImgAttributes, 'src'> & { fadeInAnimation?: boolean };

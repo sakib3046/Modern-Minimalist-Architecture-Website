@@ -6,6 +6,10 @@
   // console.log(data)
 
   export let data;
+
+
+
+
   $: ({
     site: {
       logos: { ogImage },
@@ -13,13 +17,20 @@
     page: { sections},
   } = data);
 //  $:console.log(data)
+
+
+
+
+
 </script>
 <!-- <div class="">
     <Header HeaderData={data.page.sections[0]} />
 </div> -->
+<div class="w-full">
+  {#each sections as props}
+    {#if props._type === 'landing.header'}
+      <Header HeaderData={props} />
+    {/if}
+  {/each}
 
-{#each sections as props}
-  {#if props._type === 'landing.header'}
-    <Header HeaderData={props} />
-  {/if}
-{/each}
+</div>
