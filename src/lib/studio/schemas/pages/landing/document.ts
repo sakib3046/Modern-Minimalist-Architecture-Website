@@ -13,7 +13,7 @@ const landingPage = defineType({
       name: 'sections',
       type: 'array',
       validation: (Rule) => Rule.required().min(1),
-      of: [{ type: 'landing.header' },{type:'landing.project'}],
+      of: [{ type: 'landing.header' },{type:'landing.project'},{type:'landing.about'}],
     }),
   ],
   preview: {

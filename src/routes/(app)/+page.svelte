@@ -1,7 +1,8 @@
 <script>
 // @ts-nocheck
 
-  import Header from "../../lib/components/pages/landing/hero/Header.svelte";
+  import About from "$lib/components/pages/landing/about/about.svelte";
+import Header from "../../lib/components/pages/landing/hero/Header.svelte";
   // export let data;
   // console.log(data)
 
@@ -30,6 +31,8 @@
   {#each sections as props}
     {#if props._type === 'landing.header'}
       <Header HeaderData={props} />
+    {:else if props._type === 'landing.about'}
+    <About aboutData={props}/>
     {/if}
   {/each}
 

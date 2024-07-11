@@ -2,7 +2,7 @@
   import Carousel from "./Carousel.svelte";
 
 export let HeaderData;
-console.log(HeaderData) 
+// console.log(HeaderData) 
 </script>
 <div class="px-[0.938rem] md:px-[2.5rem] xl:px-[22.5rem] bg-center bg-cover xl:bg-contain text-center text-nowrap">
   <Carousel carouselImages={HeaderData.sliderImage} sliderImageText={HeaderData.sliderImageText}/>
