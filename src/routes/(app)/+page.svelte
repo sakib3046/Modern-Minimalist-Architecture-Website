@@ -2,6 +2,7 @@
 // @ts-nocheck
 
   import About from "$lib/components/pages/landing/about/about.svelte";
+  import Testimonial from "$lib/components/pages/landing/testimonial/testimonial.svelte";
 import Header from "../../lib/components/pages/landing/hero/Header.svelte";
   // export let data;
   // console.log(data)
@@ -33,6 +34,8 @@ import Header from "../../lib/components/pages/landing/hero/Header.svelte";
       <Header HeaderData={props} />
     {:else if props._type === 'landing.about'}
     <About aboutData={props}/>
+    {:else if props._type === 'landing.testimonial'}
+    <Testimonial testimonialData={props}/>
     {/if}
   {/each}
 

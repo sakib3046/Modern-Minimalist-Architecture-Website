@@ -4,11 +4,11 @@
   import { imgBuilder } from '$lib/sanity/sanity-client';
 
     export let aboutData;
-    console.log(aboutData);
+
 </script>
 <div class="w-full bg-CodGray flex flex-col justify-center py-[3.956rem] md:py-[7.956rem] px-[0.938rem] md:px-[2.5rem] xl:px-[20rem]">
 <div class="md:px-[2.5rem]">
-    <h1 class="text-[2rem] font-[700] text-white">{aboutData.title}</h1>
+    <h1 class="text-[2rem] font-[700] text-white xl:pl-[4rem]">{aboutData.title}</h1>
     <div class="h-[3rem] md:h-[5rem]"></div>
     <div class="flex flex-col md:flex-row justify-between">
         <div class="w-full md:w-1/2 flex flex-row space-x-[3vw] bg-cover">

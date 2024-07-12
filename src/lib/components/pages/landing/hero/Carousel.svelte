@@ -11,14 +11,6 @@
   let plugins = [Autoplay()];
 </script>
 
-<!-- <SanityImage
-  lqip
-  class="lg:rounded-lg h-full w-full object-cover"
-  src={carouselImages[0]}
-  sizes="(min-width: 1024px) 90vw, 100vw"
-  imageUrlBuilder={imgBuilder}
-  alt={'banner.image.alt'} /> -->
-
 <div class="embla relative" use:emblaCarouselSvelte={{ options, plugins }}>
   <div class="embla__container ">
     {#each carouselImages as carImg}
