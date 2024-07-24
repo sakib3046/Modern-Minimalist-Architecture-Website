@@ -1,16 +1,8 @@
-<script>
-// @ts-nocheck
-
+<script lang ="ts">
   import About from "$lib/components/pages/landing/about/about.svelte";
   import Testimonial from "$lib/components/pages/landing/testimonial/testimonial.svelte";
-import Header from "../../lib/components/pages/landing/hero/Header.svelte";
-  // export let data;
-  // console.log(data)
-
+  import Header from "../../lib/components/pages/landing/hero/Header.svelte";
   export let data;
-
-
-
 
   $: ({
     site: {
@@ -20,14 +12,7 @@ import Header from "../../lib/components/pages/landing/hero/Header.svelte";
   } = data);
 //  $:console.log(data)
 
-
-
-
-
 </script>
-<!-- <div class="">
-    <Header HeaderData={data.page.sections[0]} />
-</div> -->
 <div class="w-full">
   {#each sections as props}
     {#if props._type === 'landing.header'}

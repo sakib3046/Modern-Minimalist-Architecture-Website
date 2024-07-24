@@ -1,4 +1,4 @@
-<script>
+<script lang = "ts">
   import AboutCards from "./aboutCards.svelte";
   import SanityImage from '$lib/sanity/sanity-image/sanity-image.svelte';
   import { imgBuilder } from '$lib/sanity/sanity-client';
@@ -38,22 +38,11 @@
                 </h1> 
                 <div class="md:h-[5rem] h-[3rem]"></div>
                 <div class="text-white grid grid-cols-2">
+                    {#each aboutData.projectstatus as projectstatus }
                     <div class="">
-                        <div class="">
-                            <AboutCards aboutCardData={aboutData.projectstatus[0]}/>
-                        </div>
-                        <div class="">
-                            <AboutCards aboutCardData={aboutData.projectstatus[1]}/>
-                        </div>
+                        <AboutCards aboutCardData={projectstatus}/>
                     </div>
-                    <div class="">
-                        <div class="">
-                            <AboutCards aboutCardData={aboutData.projectstatus[2]}/>
-                        </div>
-                        <div class="">
-                            <AboutCards aboutCardData={aboutData.projectstatus[3]}/>
-                        </div>
-                    </div>
+                    {/each}
                 </div>
             </div>
                 
