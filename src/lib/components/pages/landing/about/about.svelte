@@ -1,9 +1,13 @@
-<script lang = "ts">
+<script lang="ts">
   import AboutCards from "./aboutCards.svelte";
   import SanityImage from '$lib/sanity/sanity-image/sanity-image.svelte';
   import { imgBuilder } from '$lib/sanity/sanity-client';
+  import type { About } from "$lib/types/common.types";
+  
 
-    export let aboutData;
+    export let aboutData:About;
+    // console.log(aboutData);
+    
 
 </script>
 <div class="w-full bg-CodGray flex flex-col justify-center py-[3.956rem] md:py-[7.956rem] px-[0.938rem] md:px-[2.5rem] xl:px-[20rem]">

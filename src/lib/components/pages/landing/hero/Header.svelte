@@ -1,7 +1,8 @@
 <script lang='ts'>
+  import type { Header } from "$lib/types/common.types";
   import Carousel from "./Carousel.svelte";
 
-export let HeaderData;
+export let HeaderData : Header;
 // console.log(HeaderData) 
 </script>
 <div class="px-[0.938rem] md:px-[2.5rem] xl:px-[22.5rem] bg-center bg-cover xl:bg-contain text-center text-nowrap">

@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
+  import type { Testimonial } from '$lib/types/common.types';
   import TestimonialCard from './testimonialCard.svelte';
 
-  export let testimonialData;
+  export let testimonialData:Testimonial;
   console.log(testimonialData);
 </script>
 

@@ -1,7 +1,7 @@
-<script lang ="ts">
+<script lang="ts">
   import About from "$lib/components/pages/landing/about/about.svelte";
   import Testimonial from "$lib/components/pages/landing/testimonial/testimonial.svelte";
-  import Header from "../../lib/components/pages/landing/hero/Header.svelte";
+  import Header from "$lib/components/pages/landing/hero/Header.svelte";
   export let data;
 
   $: ({
