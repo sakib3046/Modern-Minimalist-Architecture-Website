@@ -53,23 +53,18 @@ export interface Child {
   _type: string;
 }
 
-// export interface SliderImage {
-//   _type: string;
-//   _key:  string;
-//   asset: Asset;
-// }
 
 export interface SliderImage {
-  _type: SanityImageObject;
+  _type: string;
   _key:  string;
-  // asset: Asset;
+  asset: Asset;
 }
 
 
-// export interface Asset {
-//   _ref:  string;
-//   _type: string;
-// }
+export interface Asset {
+  _ref:  string;
+  _type: string;
+}
 
 
 
@@ -92,7 +87,7 @@ export interface Projectstatus {
 }
 
 export interface SliderImage {
-  _type: SanityImageObject;
+  _type: string;
   _key:  string;
   asset: Asset;
 }
