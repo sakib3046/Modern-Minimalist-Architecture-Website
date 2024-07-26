@@ -39,39 +39,52 @@ const footer = defineType({
     }),
     defineField({
       name: 'contacts',
-      type: 'array',
-      validation: (Rule) => Rule.required().min(1),
-      of: [
-        {
-          name: 'option',
-          type: 'object',
-          icon: FcBusinessContact,
-          fields: [
+      type: 'object',
+      fields: [
+
+        defineField({
+          name: 'title',
+          type: 'string',
+          validation: (Rule) => Rule.required(),
+        }),
+        defineField({
+          name: 'contact',
+          type: 'array',
+          validation: (Rule) => Rule.required().min(1),
+          of: [
             {
-              name: 'name',
-              type: 'string',
-              validation: (Rule) => Rule.required(),
-            },
-            {
-              name: 'value',
-              type: 'text',
-              rows: 2,
-              validation: (Rule) => Rule.required(),
-            },
-            {
-              name: 'url',
-              type: 'string',
+              name: 'option',
+              type: 'object',
+              icon: FcBusinessContact,
+              fields: [
+                {
+                  name: 'name',
+                  type: 'string',
+                  validation: (Rule) => Rule.required(),
+                },
+                {
+                  name: 'value',
+                  type: 'text',
+                  rows: 2,
+                  validation: (Rule) => Rule.required(),
+                },
+                {
+                  name: 'url',
+                  type: 'string',
+                },
+              ],
+              preview: {
+                select: {
+                  title: 'name',
+                  subtitle: 'value',
+                },
+              },
             },
           ],
-          preview: {
-            select: {
-              title: 'name',
-              subtitle: 'value',
-            },
-          },
-        },
-      ],
-    }),
+        }),
+
+      ]}),
+    
 
     defineField({
       name: 'social',
