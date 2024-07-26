@@ -1,7 +1,8 @@
 <script lang="ts">
+  import type { Footer } from "$lib/types/Footer";
   import FooterCard from "./footerCard.svelte";
 
-  export let footerData;
+  export let footerData:Footer;
   console.log(footerData);
 </script>
 
@@ -14,9 +15,9 @@
       <i class="fa-sharp fa-solid fa-turn-up rotate-90 text-[2.55rem] md:text-[3.55rem]"></i>
     </div>
     <div class="flex flex-auto flex-wrap">
-        <FooterCard optionTitle={footerData.sections.title} options={footerData.sections.section}/>
+        <FooterCard optionTitle="" options={footerData.sections.section}/>
         <FooterCard optionTitle={footerData.social.title} options={footerData.social.socials}/>
-        <FooterCard optionTitle={footerData.portfolios.title} options={footerData.portfolios.portfolios}/>
+        <FooterCard optionTitle="" options={footerData.portfolios.portfolios}/>
     </div>
   </div>
   <div class=" flex flex-col md:flex-row justify-start md:justify-center  pt-[2rem] md:pt-5">
