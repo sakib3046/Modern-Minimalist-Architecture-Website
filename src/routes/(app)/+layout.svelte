@@ -2,6 +2,7 @@
   import { urlFor } from '$lib/sanity/sanity-client';
   import type { LayoutData } from './$types';
   import Navbar from "../../lib/components/pages/landing/hero/Navbar.svelte";
+  import Footer from '$lib/components/pages/landing/footer/footer.svelte';
   export let data: LayoutData;
   $: ({
     site: {
@@ -12,7 +13,7 @@
   let faviconImage = favicon
     ? urlFor(favicon).size(256, 256).ignoreImageParams().url()
     : null;
-    // $:console.log(logoText)
+    $:console.log(data)
 </script>
 
 <svelte:head>
@@ -26,4 +27,6 @@
   <Navbar/>
 </div>
 
+
 <slot />
+<Footer footerData={data.site.footer}/>

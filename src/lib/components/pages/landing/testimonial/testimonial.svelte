@@ -3,7 +3,7 @@
   import TestimonialCard from './testimonialCard.svelte';
 
   export let testimonialData:Testimonial;
-  console.log(testimonialData);
+  // console.log(testimonialData);
 </script>
 
 <div
