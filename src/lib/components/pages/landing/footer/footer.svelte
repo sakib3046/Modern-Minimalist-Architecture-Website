@@ -1,4 +1,6 @@
 <script lang="ts">
+  import FooterCard from "./footerCard.svelte";
+
   export let footerData;
   console.log(footerData);
 </script>
@@ -8,12 +10,15 @@
   <div class=" flex flex-auto flex-wrap justify-between">
     <div
       class="optionDiv max-w-full text-[3.55rem] font-bold leading-[3.5rem] md:max-w-[16.5rem] md:text-[5rem] md:leading-[5rem]">
-      drop us a line
+      {footerData.title}
     </div>
     <div class="flex flex-auto flex-wrap justify-end">
-      <div class="optionDiv">asdfj</div>
+        <FooterCard optionsTitle= 'we hire' options={footerData.contacts}/>
+      <!-- <div class="optionDiv">
+        jksjk
+      </div>
       <div class="optionDiv">djhsajh</div>
-      <div class="optionDiv">djhsajh</div>
+      <div class="optionDiv">djhsajh</div> -->
     </div>
   </div>
 </div>

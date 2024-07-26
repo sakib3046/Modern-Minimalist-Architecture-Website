@@ -21,6 +21,23 @@ const footer = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'sections',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'title',
+          type: 'string',
+          validation: (Rule) => Rule.required(),
+        }),
+        defineField({
+          name: 'section',
+          type: 'array',
+          validation: (Rule) => Rule.required().min(1),
+          of: [{ type: 'social' }],
+        }),
+      ],
+    }),
+    defineField({
       name: 'contacts',
       type: 'array',
       validation: (Rule) => Rule.required().min(1),
