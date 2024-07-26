@@ -15,12 +15,6 @@ const footer = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'subtitle',
-      type: 'text',
-      rows: 3,
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'sections',
       type: 'object',
       fields: [
@@ -33,12 +27,12 @@ const footer = defineType({
           name: 'section',
           type: 'array',
           validation: (Rule) => Rule.required().min(1),
-          of: [{ type: 'social' }],
+          of: [{ type: 'sectionAddr' }],
         }),
       ],
     }),
     defineField({
-      name: 'contacts',
+      name: 'portfolios',
       type: 'object',
       fields: [
 
@@ -48,7 +42,7 @@ const footer = defineType({
           validation: (Rule) => Rule.required(),
         }),
         defineField({
-          name: 'contact',
+          name: 'portfolios',
           type: 'array',
           validation: (Rule) => Rule.required().min(1),
           of: [
@@ -63,14 +57,9 @@ const footer = defineType({
                   validation: (Rule) => Rule.required(),
                 },
                 {
-                  name: 'value',
-                  type: 'text',
-                  rows: 2,
-                  validation: (Rule) => Rule.required(),
-                },
-                {
                   name: 'url',
                   type: 'string',
+                  validation: (Rule) => Rule.required(),
                 },
               ],
               preview: {
@@ -103,6 +92,17 @@ const footer = defineType({
         }),
       ],
     }),
+    
+    defineField({
+      name:'CopyWriteInfo',
+      type:'array',
+      validation:(Rule)=> Rule.required(),
+      of:[
+        {
+          type:'string'
+        }
+      ]
+    })
   ],
   preview: {
     select: {
