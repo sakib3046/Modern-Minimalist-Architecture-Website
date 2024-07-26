@@ -21,7 +21,6 @@ const footer = defineType({
         defineField({
           name: 'title',
           type: 'string',
-          validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'section',
@@ -39,7 +38,7 @@ const footer = defineType({
         defineField({
           name: 'title',
           type: 'string',
-          validation: (Rule) => Rule.required(),
+
         }),
         defineField({
           name: 'portfolios',
@@ -82,7 +81,7 @@ const footer = defineType({
         defineField({
           name: 'title',
           type: 'string',
-          validation: (Rule) => Rule.required(),
+
         }),
         defineField({
           name: 'socials',

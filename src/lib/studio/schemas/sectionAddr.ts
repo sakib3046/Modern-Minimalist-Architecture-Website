@@ -6,12 +6,12 @@ const sectionAddr = {
   type: 'object',
   fields: [
     {
-      name: 'sectionName',
+      name: 'name',
       type: 'string',
       validation: (Rule: Rule) => Rule.required(),
     },
     {
-      name: 'sectionId',
+      name: 'url',
       type: 'string',
     },
   ],
