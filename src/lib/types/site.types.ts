@@ -23,29 +23,61 @@ export interface Nav {
   _createdAt: Date;
 }
 
+// export interface Footer {
+//   title: string;
+//   subtitle: string;
+//   contacts: Contact[];
+//   social: SocialProps;
+// }
+
+// export interface SocialProps {
+//   title: string;
+//   socials: Social[];
+// }
+
+// export interface Contact {
+//   _type: string;
+//   _key: string;
+//   name: string;
+//   value: string;
+//   url?: string;
+// }
+
+// export interface Social {
+//   _type: string;
+//   _key: string;
+//   name: string;
+//   url: string;
+// }
 export interface Footer {
-  title: string;
-  subtitle: string;
-  contacts: Contact[];
-  social: SocialProps;
+  _type:         string;
+  portfolios:    Portfolios;
+  _id:           string;
+  title:         string;
+  sections:      Sections;
+  social:        Social;
+  _rev:          string;
+  _updatedAt:    Date;
+  _createdAt:    Date;
+  CopyWriteInfo: string[];
 }
 
-export interface SocialProps {
-  title: string;
-  socials: Social[];
+export interface Portfolios {
+  portfolios: Portfolio[];
 }
 
-export interface Contact {
+export interface Portfolio {
   _type: string;
-  _key: string;
-  name: string;
-  value: string;
-  url?: string;
+  name:  string;
+  _key:  string;
+  url:   string;
+}
+
+export interface Sections {
+  section: Portfolio[];
 }
 
 export interface Social {
-  _type: string;
-  _key: string;
-  name: string;
-  url: string;
+  socials: Portfolio[];
+  title:   string;
 }

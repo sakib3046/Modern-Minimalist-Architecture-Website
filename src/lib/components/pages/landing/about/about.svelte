@@ -2,7 +2,8 @@
   import AboutCards from "./aboutCards.svelte";
   import SanityImage from '$lib/sanity/sanity-image/sanity-image.svelte';
   import { imgBuilder } from '$lib/sanity/sanity-client';
-  import type { About } from "$lib/types/common.types";
+  import type { About } from "$lib/types/landing.types";
+
   
 
     export let aboutData:About;

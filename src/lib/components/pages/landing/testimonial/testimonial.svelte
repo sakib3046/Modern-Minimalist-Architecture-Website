@@ -1,8 +1,9 @@
 <script lang="ts">
-  import type { Testimonial } from '$lib/types/common.types';
+  import type { Testimonial } from '$lib/types/landing.types';
+
   import TestimonialCard from './testimonialCard.svelte';
 
-  export let testimonialData:Testimonial;
+  export let testimonialData: Testimonial;
   // console.log(testimonialData);
 </script>
 
@@ -21,7 +22,7 @@
       <div class="h-[3rem] md:hidden"></div>
 
       <div class="flex w-full md:w-1/2">
-          <TestimonialCard cardData={testimonialData.testimonial[1]} />
+        <TestimonialCard cardData={testimonialData.testimonial[1]} />
       </div>
     </div>
   </div>

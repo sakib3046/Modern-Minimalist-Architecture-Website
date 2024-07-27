@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import type { Header } from "$lib/types/common.types";
+  import type {Header} from "$lib/types/landing.types";
   import Carousel from "./Carousel.svelte";
 
 export let HeaderData : Header;
