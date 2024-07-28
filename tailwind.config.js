@@ -13,6 +13,7 @@ export default {
         "DoveGray":"#636363",
         "Background":"#f8f8f8",
         "MineShaftV2":"#333333",
+        "Alabster":"#F8F8F8",
       },
       fontFamily: {
         

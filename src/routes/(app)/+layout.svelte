@@ -21,7 +21,7 @@
 </svelte:head>
 
 <main class="overflow-hidden"></main>
-<div class="min-h-[3.375rem] w-screen md:min-h-[6.5rem]">
+<div class="min-h-[3.375rem] w-screen md:min-h-[6.5rem] bg-Alabster">
   <Navbar />
 </div>
 

@@ -2,7 +2,7 @@
     export let aboutCardData;
 </script>
 <div class="flex flex-col justify-start">
-    <h1 class="text-[2.5rem] md:text-[3.5rem] text-white">{aboutCardData.count}</h1>
-    <p class="text-[1rem] text-white ">{aboutCardData.title_p1}</p>
-    <p class="text-[1rem] text-white ">{aboutCardData.title_p2}</p>
+    <h1 class="text-[2.5rem] leading-[2.5rem] md:leading-[3.5rem] font-[700] md:text-[3.5rem] text-white">{aboutCardData.count}</h1>
+    <p class="text-[1rem] font-[400] leading-[1.5rem] text-white ">{aboutCardData.title_p1}</p>
+    <p class="text-[1rem] font-[400] leading-[1.5rem] text-white ">{aboutCardData.title_p2}</p>
 </div>

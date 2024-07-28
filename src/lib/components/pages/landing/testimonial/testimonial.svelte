@@ -19,7 +19,7 @@
         <TestimonialCard cardData={testimonialData.testimonial[0]} />
       </div>
 
-      <div class="h-[3rem] md:hidden"></div>
+      <div class="h-[3rem]  md:w-[3rem] "></div>
 
       <div class="flex w-full md:w-1/2">
         <TestimonialCard cardData={testimonialData.testimonial[1]} />
