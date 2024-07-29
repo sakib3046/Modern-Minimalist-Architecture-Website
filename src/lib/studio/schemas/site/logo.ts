@@ -1,5 +1,5 @@
 import { FaRegStar } from 'react-icons/fa';
-// import type { Rule } from 'sanity';
+ import type { Rule } from 'sanity';
 
 const siteLogo = {
   name: 'site.logos',
@@ -9,18 +9,14 @@ const siteLogo = {
   fields: [
 
       {
-        name:'logoText',
-        type:'string'
+        name:'logoTextPrimary',
+        type:'string',
+        validation: (Rule: Rule) => Rule.required(),
+      },
+      {
+        name:'logoTextSecondary',
+        type:'string',
       }
-
-
-
-
-    // {
-    //   name: 'logo',
-    //   type: 'image',
-    //   validation: (Rule: Rule) => Rule.required(),
-    // },
 
     // {
     //   name: 'favicon',
