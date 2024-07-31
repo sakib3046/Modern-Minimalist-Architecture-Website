@@ -3,7 +3,7 @@
   export let optionTitle;
 </script>
 
-<div class="flex flex-col justify-start md:shrink-0 md:self-stretch pl-[2rem] md:pl-[3rem]  text-MineShaft w-[13rem] max-w-[78rem] leading-[2.5rem] mt-[2rem] md:mt-0">
+<div class="flex flex-col justify-start md:shrink-0 md:self-stretch pl-[2rem] md:pl-[3rem]  text-MineShaft leading-[2.5rem] mt-[2rem] md:mt-0">
   <h1>
     {#if optionTitle}
       {optionTitle}

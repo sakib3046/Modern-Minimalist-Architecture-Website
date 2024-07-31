@@ -47,7 +47,7 @@ const about =defineType(
                         defineField(
                             {
                                 name:'count',
-                                type:'number'
+                                type:'string'
                             }
                         ), 
                     ]
