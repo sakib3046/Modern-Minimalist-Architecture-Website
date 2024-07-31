@@ -31,9 +31,9 @@
 </div>
 
 <style>
-  .optionDiv {
+  /* .optionDiv {
     @apply pl-[2rem] md:pl-[3rem];
-  }
+  } */
   .container{
     display: flex;
     flex: 1 0 0;
