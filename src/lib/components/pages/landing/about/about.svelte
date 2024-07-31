@@ -38,7 +38,7 @@
 
         <div class="md:w-1/2 flex md:flex-row md:justify-end ">
             <div class="md:w-[23rem] pl-3">
-                <h1 class="text-white AboutParagraph ">
+                <h1 class="text-white text-[1.25rem] leading-[1.875rem] font-[400] ">
                     {aboutData.description}
                 </h1> 
                 <div class="md:h-[5rem] h-[3rem]"></div>

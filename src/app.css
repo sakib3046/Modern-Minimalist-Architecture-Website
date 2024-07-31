@@ -24,9 +24,7 @@ body::-webkit-scrollbar {
 }
 
 @layer utilities {
-  .AboutParagraph{
-    @apply text-[1.25rem] leading-[1.25rem] font-[400]
-}
+
 .mdxlScreenHeading{
     @apply text-[1.75rem] leading-[2.625rem] font-[400]
     }
