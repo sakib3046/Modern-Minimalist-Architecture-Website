@@ -1,20 +1,9 @@
 import type { SanityImageObject } from '@sanity/image-url/lib/types/types';
 import type { Link, SeoProps } from './common.types';
 import type { PortableTextBlock } from '@portabletext/types';
-import type { Footer } from './Footer';
-import type { LogoText, Navigations } from './nav';
+
 
 export interface LandingPageProps {
-  site: Site;
-  page: Page;
-}
-export interface Site {
-  logos:  LogoText;
-  nav:    Navigations;
-  footer: Footer;
-}
-
-export interface Page {
   _rev:       string;
   _type:      string;
   _id:        string;
@@ -22,6 +11,7 @@ export interface Page {
   _updatedAt: Date;
   sections:   Section[];
   _createdAt: Date;
+
 }
 
 type Section = 
