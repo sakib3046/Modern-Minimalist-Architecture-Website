@@ -25,15 +25,12 @@
   <div
     class=" flex flex-col justify-start pt-[2rem] md:flex-row md:justify-center md:pt-5">
     {#each footerData.CopyWriteInfo as info}
-      <h1 class="pl-[2rem]">{info}</h1>
+      <h6 class="pl-[2rem]">{info}</h6>
     {/each}
   </div>
 </div>
 
 <style>
-  /* .optionDiv {
-    @apply pl-[2rem] md:pl-[3rem];
-  } */
   .container{
     display: flex;
     flex: 1 0 0;

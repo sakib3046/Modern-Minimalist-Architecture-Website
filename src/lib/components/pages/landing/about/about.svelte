@@ -7,13 +7,12 @@
   
 
     export let aboutData:About;
-    // console.log(aboutData);
     
 
 </script>
 <div class="w-full bg-CodGray flex flex-col justify-center py-[3.956rem] md:py-[7.956rem] px-[0.938rem] md:px-[2.5rem] xl:px-[20rem]">
 <div class="md:px-[2.5rem]">
-    <h1 class="text-[2rem] font-[700] text-white xl:pl-[4rem]">{aboutData.title}</h1>
+    <h2 class="text-[2rem] font-[700] text-white xl:pl-[4rem]">{aboutData.title}</h2>
     <div class="h-[3rem] md:h-[5rem]"></div>
     <div class="flex flex-col md:flex-row justify-between">
         <div class="w-full md:w-1/2 flex flex-row space-x-[3vw] bg-cover">
@@ -38,9 +37,9 @@
 
         <div class="md:w-1/2 flex md:flex-row md:justify-end ">
             <div class="md:w-[23rem] pl-3">
-                <h1 class="text-white text-[1.25rem] leading-[1.875rem] font-[400] ">
+                <h3 class="text-white text-[1.25rem] leading-[1.875rem] font-[400] ">
                     {aboutData.description}
-                </h1> 
+                </h3> 
                 <div class="md:h-[5rem] h-[3rem]"></div>
                 <div class="text-white grid grid-cols-2">
                     {#each aboutData.projectstatus as projectstatus }

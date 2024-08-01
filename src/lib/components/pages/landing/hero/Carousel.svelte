@@ -11,7 +11,7 @@
   import DotButton from './DotButton.svelte';
 
   export let carouselImages:SanityImageObject[];
-  export let sliderImageText:string;
+  export let sliderImageText:string[];
 
   let emblaApi: EmblaCarouselType;
   let sectionEl: HTMLElement;
@@ -34,7 +34,6 @@
     });
   }
 
-  // console.log(carouselImages);
 </script>
 
 <div
