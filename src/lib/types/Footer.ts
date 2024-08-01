@@ -31,7 +31,7 @@ export interface Social {
     title:   string;
 }
 
-export type footerCard={
+export type FooterCard={
     _type: string;
     name:  string;
     _key:  string;

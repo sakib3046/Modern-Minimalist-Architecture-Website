@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { aboutCard } from "$lib/types/landing.types";
+  import type { AboutCard } from "$lib/types/landing.types";
 
-    export let aboutCardData:aboutCard;
+    export let aboutCardData:AboutCard;
     
 </script>
 <div class="flex flex-col justify-start mb-[32px] md:mb-[48px]">

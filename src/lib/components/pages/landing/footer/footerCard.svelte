@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { footerCard } from '$lib/types/Footer';
-  export let options:footerCard[];
+  import type { FooterCard } from '$lib/types/Footer';
+  export let options:FooterCard[];
   export let optionTitle:string | undefined = undefined;
   
 </script>

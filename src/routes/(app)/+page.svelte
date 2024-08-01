@@ -2,15 +2,16 @@
   import About from "$lib/components/pages/landing/about/about.svelte";
   import Testimonial from "$lib/components/pages/landing/testimonial/testimonial.svelte";
   import Header from "$lib/components/pages/landing/hero/Header.svelte";
-  export let data;
+  import type { LandingPageProps } from "$lib/types/landing.types";
+  export let data:LandingPageProps;
 
   $: ({
     site: {
-      logos: { ogImage },
+      logos: {},
     },
     page: { sections},
   } = data);
-//  $:console.log(data)
+ $:console.log(data)
 
 </script>
 <div class="w-full">

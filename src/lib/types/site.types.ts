@@ -5,14 +5,14 @@ export interface SiteDataProps {
   logos: {
     favicon: SanityImageWithAlt;
     ogImage: SanityImageWithAlt;
-    logoText: logoText;
+    logoText: LogoText;
   };
   nav: Nav;
   footer: Footer;
   greetings: Greetings;
 }
 
-export type logoText = {
+export type LogoText = {
   name: string;
   _type: string;
 };

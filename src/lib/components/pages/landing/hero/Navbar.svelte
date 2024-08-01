@@ -1,13 +1,12 @@
 <script lang="ts">
-  import type { logoText,navigations } from "$lib/types/nav";
+  import type { LogoText,Navigations } from "$lib/types/nav";
   import Sidebar from "./Sidebar.svelte";
-  export let logoText:logoText;
-  export let navigations:navigations[];
+  export let logoText:LogoText;
+  export let navigations:Navigations[];
   export let links;
   let plinks= links.portfolios.portfolios;
   let slinks= links.social.socials
   let allLinks= slinks.concat(plinks)
-  console.log(navigations);
   
 
 
