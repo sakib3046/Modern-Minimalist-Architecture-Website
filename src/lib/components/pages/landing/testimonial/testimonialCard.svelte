@@ -1,5 +1,7 @@
-<script>
-    export let cardData;
+<script lang="ts">
+  import type { TestimonialElement } from "$lib/types/landing.types";
+
+    export let cardData:TestimonialElement;
 </script>
 <div class="">
     <p class="text-[1.25rem] font-[400] leading-[1.875rem] md:text-[1.5rem] md:font-[400] md:leading-[2.25rem] md:pr-[4.5rem]">{cardData.testimonial}

@@ -1,13 +1,16 @@
 <script lang="ts">
+  import type { logoText,navigations } from "$lib/types/nav";
   import Sidebar from "./Sidebar.svelte";
-  export let logoText;
-  export let navigations;
+  export let logoText:logoText;
+  export let navigations:navigations[];
   export let links;
   let plinks= links.portfolios.portfolios;
   let slinks= links.social.socials
   let allLinks= slinks.concat(plinks)
+  console.log(navigations);
   
-  
+
+
 </script>
 
 <div class="flex w-full flex-row justify-between p-[0.938rem] xl:justify-center">

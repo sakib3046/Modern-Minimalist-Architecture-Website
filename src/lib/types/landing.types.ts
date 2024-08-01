@@ -1,6 +1,7 @@
 import type { SanityImageObject } from '@sanity/image-url/lib/types/types';
 import type { Link, SeoProps } from './common.types';
 import type { PortableTextBlock } from '@portabletext/types';
+import type { Footer } from './Footer';
 
 export interface LandingPageProps {
   seo: SeoProps;
@@ -10,7 +11,8 @@ export interface LandingPageProps {
 type Section = 
               |Header 
               |About
-              |Testimonial;
+              |Testimonial
+              |Footer;
 export interface HeroProps {
   _type: 'landing.hero';
   title: PortableTextBlock[];
@@ -34,13 +36,18 @@ export interface About {
   _type:         'landing.about';
   description:   string;
   _key:          string;
-  image:         null;
 }
+export type aboutCard={
+  count:string
+title_p1: string
+title_p2 : string
+_key : string
+} 
 
 export interface Projectstatus {
   title_p1: string;
   title_p2: string;
-  count:    number;
+  count:    string;
   _key:     string;
 }
 
@@ -50,7 +57,6 @@ export interface Projectstatus {
 export interface Testimonial {
   sectionTitle: string;
   _type:        'landing.testimonial';
-  image:        null;
   _key:         string;
   testimonial:  TestimonialElement[];
 }

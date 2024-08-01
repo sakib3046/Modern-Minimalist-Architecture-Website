@@ -14,11 +14,11 @@
         {footerData.title}
         <CornerDownRight size=64/>
       </div>
-      <FooterCard optionTitle='' options={footerData.sections.section} />
+      <FooterCard  options={footerData.sections.section} />
       <FooterCard
         optionTitle={footerData.social.title}
         options={footerData.social.socials} />
-      <FooterCard  optionTitle='' options={footerData.portfolios.portfolios} />
+      <FooterCard   options={footerData.portfolios.portfolios} />
       <div class="w-[2.5rem]"></div>
 
   </div>

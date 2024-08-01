@@ -1,14 +1,16 @@
 <script lang="ts">
-  export let options;
-  export let optionTitle;
+  import type { footerCard } from '$lib/types/Footer';
+  export let options:footerCard[];
+  export let optionTitle:string | undefined = undefined;
+  
 </script>
 
 <div class="flex flex-col justify-start md:shrink-0 md:self-stretch pl-[2rem] md:pl-[3rem]  text-MineShaft w-[13rem] max-w-[78rem] leading-[2.5rem] mt-[2rem] md:mt-0">
-  <h1>
+  
     {#if optionTitle}
-      {optionTitle}
+    <h5>{optionTitle}</h5>
     {/if}
-  </h1>
+
   
   {#each options as option}
     <ul class="list-none">

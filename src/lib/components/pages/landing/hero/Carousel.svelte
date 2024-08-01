@@ -6,11 +6,12 @@
   } from 'embla-carousel-svelte';
   import Autoplay from 'embla-carousel-autoplay';
   import SanityImage from '$lib/sanity/sanity-image/sanity-image.svelte';
+  import type { SanityImageObject } from '@sanity/image-url/lib/types/types';
   import { imgBuilder } from '$lib/sanity/sanity-client';
   import DotButton from './DotButton.svelte';
 
-  export let carouselImages;
-  export let sliderImageText;
+  export let carouselImages:SanityImageObject[];
+  export let sliderImageText:string;
 
   let emblaApi: EmblaCarouselType;
   let sectionEl: HTMLElement;

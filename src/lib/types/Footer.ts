@@ -30,3 +30,10 @@ export interface Social {
     socials: Portfolio[];
     title:   string;
 }
+
+export type footerCard={
+    _type: string;
+    name:  string;
+    _key:  string;
+    url:   string;
+}
