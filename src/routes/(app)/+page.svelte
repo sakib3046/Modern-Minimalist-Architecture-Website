@@ -2,6 +2,7 @@
   import About from "$lib/components/pages/landing/about/about.svelte";
   import Testimonial from "$lib/components/pages/landing/testimonial/testimonial.svelte";
   import Header from "$lib/components/pages/landing/hero/Header.svelte";
+  import Projects from "$lib/components/pages/landing/projects/projects.svelte"
   export let data;
   $: ({
     site: {
@@ -15,6 +16,8 @@
   {#each sections as props}
     {#if props._type === 'landing.header'}
       <Header HeaderData={props} />
+    {:else if props._type === 'landing.project'}
+      <Projects projectsData={props}/>
     {:else if props._type === 'landing.about'}
     <About aboutData={props}/>
     {:else if props._type === 'landing.testimonial'}
