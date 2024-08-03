@@ -3,7 +3,6 @@
   import Testimonial from "$lib/components/pages/landing/testimonial/testimonial.svelte";
   import Header from "$lib/components/pages/landing/hero/Header.svelte";
   export let data;
-
   $: ({
     site: {
       logos: {ogImage},
