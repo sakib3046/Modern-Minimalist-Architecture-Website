@@ -16,12 +16,9 @@ export interface LandingPageProps {
 
 type Section = 
               |Header 
+              |Projects
               |About
               |Testimonial
-
-              
-
-
 export interface HeroProps {
   _type: 'landing.hero';
   title: PortableTextBlock[];
@@ -38,6 +35,21 @@ export interface Header {
 }
 
 
+
+export interface Projects {
+  projects: Project[];
+  _type:    'landing.project';
+  _key:     string;
+}
+
+export interface Project {
+  description: string;
+  _key:        string;
+  title:       string;
+  type:        string;
+  image:       SanityImageObject[] ;
+  _type:       string;
+}
 export interface About {
   title:         string;
   projectstatus: Projectstatus[];
