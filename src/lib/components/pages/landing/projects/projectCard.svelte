@@ -4,7 +4,7 @@
   import type { Project } from "$lib/types/landing.types";
 
 export let projectCardData:Project;
-console.log(projectCardData);
+// console.log(projectCardData);
 
 </script>
 

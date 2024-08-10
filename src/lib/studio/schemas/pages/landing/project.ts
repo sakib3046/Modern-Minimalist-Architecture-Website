@@ -1,15 +1,12 @@
-import { defineArrayMember, defineField, defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 
 const project = defineType({
+  
   name: 'landing.project',
   title: 'Projects',
-  type: 'object',
+  type: 'document',
   fields: [
-    defineField({
-      name: 'projects',
-      type: 'array',
-      of: [
-        defineArrayMember({
+        defineField({
           name: 'project',
           type: 'object',
           fields: [
@@ -31,23 +28,15 @@ const project = defineType({
               validation: (Rule) => Rule.required(),
             }),
             defineField({
-              title: 'Tag',
-              name: 'type',
-              type: 'string',
-              options: {
-                list: [
-                  { title: 'branding', value: 'branding' },
-                  { title: 'interior design.', value: 'interior design.' },
-                  { title: 'architect', value: 'architect' },
-                  { title: 'other', value: 'other' },
-                ],
-              },
+              title: 'Category',
+              name: 'categoryName',
+              type: 'reference',
+              to: [{type: 'category'}],
               validation: (Rule) => Rule.required(),
             }),
           ],
         }),
       ],
-    }),
-  ],
-});
+    })
+
 export default project;

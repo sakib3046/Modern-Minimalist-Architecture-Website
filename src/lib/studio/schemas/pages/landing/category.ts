@@ -1,23 +1,13 @@
-import { defineArrayMember, defineField, defineType } from 'sanity';
-const category= defineType(
-{
-    name:'landing.project.category',
-    title: 'Category',
-    type:'object',
-    fields:[
-        defineField(
-            {
-                name:'category',
-                type:'array',
-                of:[defineArrayMember(
-                 {
-                    type:'string'
-                 }
-                )
-            ]
-            }
-        )
-    ]
-}
-)
+import { defineField, defineType } from 'sanity';
+const category = defineType({
+  name: 'category',
+  title: 'Category',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'name',
+      type: 'string',
+    }),
+  ],
+});
 export default category;

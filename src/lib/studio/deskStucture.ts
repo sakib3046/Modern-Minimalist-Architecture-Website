@@ -76,4 +76,6 @@ export const AppStructure: StructureResolver = (S) =>
               }),
             ]),
         ),
+        S.documentTypeListItem('category').title('Category'),
+        S.documentTypeListItem('landing.project').title('Project'),
     ]);

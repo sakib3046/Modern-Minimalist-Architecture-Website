@@ -3,6 +3,7 @@
   import ProjectCard from "./projectCard.svelte";
 
 export let projectsData:Projects;
+console.log(projectsData);
 
 
 </script>
