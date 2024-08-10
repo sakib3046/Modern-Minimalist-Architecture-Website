@@ -15,6 +15,15 @@ const project = defineType({
               type: 'string',
             }),
             defineField({
+              title: 'Slug',
+              name: 'slug',
+              type: 'slug',
+              options: {
+                source: 'title',
+              }
+
+            }),
+            defineField({
               name: 'description',
               type: 'text',
               validation: (Rule) => Rule.required(),
@@ -25,7 +34,7 @@ const project = defineType({
               options: {
                 hotspot: true,
               },
-              validation: (Rule) => Rule.required(),
+              // validation: (Rule) => Rule.required(),
             }),
             defineField({
               title: 'Category',

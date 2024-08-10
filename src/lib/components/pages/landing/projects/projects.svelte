@@ -16,9 +16,9 @@ console.log(projectsData);
         </div>
     </div>
     <div class="flex flex-row gap-[1rem] md:gap-[3rem] flex-wrap justify-center">
-        {#each projectsData.projects as data }
+        <!-- {#each projectsData.projects as data }
             <ProjectCard projectCardData={data}/>
-        {/each}
+        {/each} -->
     </div>
 </div>
 
