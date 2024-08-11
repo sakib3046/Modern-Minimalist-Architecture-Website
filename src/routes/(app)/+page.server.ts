@@ -11,17 +11,17 @@ const query = groq`
 		sections[] {
 			...,
 			${asset('image')},
-			projects[]{
-				...,
-				categoryName->{
-					...
-				}
-				}
 		},
 		
 	"projects": *[_type == "landing.project"][]{
 		...,
+		project{
+        ...,
+        categoryName->{
+          ...,
+        },
 		${asset('image')},
+	}
 	}
 	}`;
 

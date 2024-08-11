@@ -10,6 +10,7 @@
     },
     page: { sections },
   } = data);
+  // $:console.log(data)
 </script>
 
 <div class="w-full">

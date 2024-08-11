@@ -1,7 +1,7 @@
 import type { SanityImageObject } from '@sanity/image-url/lib/types/types';
 import type { Link, SeoProps } from './common.types';
 import type { PortableTextBlock } from '@portabletext/types';
-import type { Slug } from 'sanity';
+import type { Projects } from '$lib/types/projects';
 
 
 export interface LandingPageProps {
@@ -10,7 +10,7 @@ export interface LandingPageProps {
   _id:        string;
   seo:        SeoProps;
   _updatedAt: Date;
-  projects: Projects;
+  projects: Projects[];
   sections:   Section[];
   _createdAt: Date;
 
@@ -35,28 +35,6 @@ export interface Header {
   _key:            string;
 }
 
-
-
-export interface Projects {
-  project: Project[];
-  _type:    'landing.project';
-  _key:     string;
-}
-
-export interface Project {
-  categoryName: CategoryName;
-  slug: Slug;
-  description: string;
-  _key:        string;
-  title:       string;
-  type:        string;
-  image:       SanityImageObject[] ;
-  _type:       string;
-}
-export interface CategoryName {
-  _ref:  string;
-  _type: string;
-}
 export interface About {
   title:         string;
   projectstatus: Projectstatus[];
