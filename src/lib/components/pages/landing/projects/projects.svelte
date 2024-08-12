@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { Projects } from '$lib/types/projects';
-  import { TargetIcon } from 'lucide-svelte';
   import ProjectCard from './projectCard.svelte';
 
   export let projectsData: Projects[];
@@ -13,16 +12,7 @@
     return tags;
   }
   let allTags = catName(projectsData);
-
-  $:{
-      function cardData(projectsData:object[]) {
-        let cardData:object[]=[];
-        
-      }
-
-  }
-
-  console.log(allTags);
+console.log(allTags);
 </script>
 
 <div
@@ -34,7 +24,7 @@
     <div class=" flex flex-row-reverse">
       {#each allTags as tag}
         <div class="px-[1rem]">
-          <button >{tag}</button>
+          <button>{tag}</button>
         </div>
       {/each}
     </div>

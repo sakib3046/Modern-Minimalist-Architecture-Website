@@ -4,7 +4,7 @@
   import Project from "./projects.svelte";
 
 export let projectCardData:Project;
-// console.log(projectCardData);
+//  console.log(projectCardData);
 
 </script>
 
