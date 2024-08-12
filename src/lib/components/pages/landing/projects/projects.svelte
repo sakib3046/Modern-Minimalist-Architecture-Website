@@ -30,15 +30,25 @@ $:activeCategory,filterProjectByCategory();
     <div class="text-[2rem] font-[700] leading-[2.4rem] -tracking-[0.047rem]">
       latest projects.
     </div>
-    <div class=" flex flex-row">
-      {#each allCategory as category}
-        <div class="px-[1rem]">
-          <button on:click={()=>{
-            activeCategory=category
-          }}>{category.name}</button>
-        </div>
-      {/each}
-    </div>
+      <div class="hidden sm:flex flex-row">
+        {#each allCategory as category}
+          <div class="px-[1rem]">
+            <button on:click={()=>{
+              activeCategory=category
+            }}>{category.name}</button>
+          </div>
+        {/each}
+      </div>
+      <div class="sm:hidden">
+        <select name="" id="">
+          {#each allCategory as category }
+            <option on:change={()=>{
+              activeCategory=category
+            }}>{category.name}</option>
+          {/each}
+        </select>
+      </div>
+
   </div>
   <div class="flex flex-row flex-wrap justify-center gap-[1rem] md:gap-[3rem]">
     {#each filteredProject as data}
