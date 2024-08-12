@@ -9,7 +9,6 @@
   let filteredProject=projectsData;
   let allCategory=[{_id:String(Math.random()*1000),name:'all'},...category]
   let activeCategory=allCategory[0]
-  $:console.log(activeCategory);
   function filterProjectByCategory() {
     if (activeCategory.name==="all" ) {
       filteredProject=projectsData;
