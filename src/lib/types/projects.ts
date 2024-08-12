@@ -1,26 +1,18 @@
 import type { SanityImageObject } from '@sanity/image-url/lib/types/types';
 import type { Slug } from 'sanity';
+import type { Category } from './landing.types';
 
 export interface Projects {
     _createdAt: Date;
     _rev:       string;
-    _type:      string;
-    project:    Project;
+    _type:      'project';
     _id:        string;
     _updatedAt: Date;
-    image:      null;
-}
-
-export interface Project {
     title:        string;
-    categoryName: CategoryName;
+    categoryName: Category;
     slug:         Slug;
     image:        SanityImageObject[];
     description:  string;
 }
 
-export interface CategoryName {
-    _ref:  string;
-    _type: string;
-}
 

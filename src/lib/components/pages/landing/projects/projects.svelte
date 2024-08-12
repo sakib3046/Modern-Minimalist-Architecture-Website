@@ -1,18 +1,28 @@
 <script lang="ts">
+  import type { Category } from '$lib/types/landing.types';
   import type { Projects } from '$lib/types/projects';
   import ProjectCard from './projectCard.svelte';
 
   export let projectsData: Projects[];
-  function catName(projectsData: object[]) {
-    let tags: string[] = [];
-    for (let data of projectsData) {
-      tags.push(data.project.categoryName.name);
+  export let category:Category[];
+
+  let filteredProject=projectsData;
+  let allCategory=[{_id:String(Math.random()*1000),name:'all'},...category]
+  let activeCategory=allCategory[0]
+  $:console.log(activeCategory);
+  function filterProjectByCategory() {
+    if (activeCategory.name==="all" ) {
+      filteredProject=projectsData;
     }
-    tags.push('all.');
-    return tags;
+    else{
+      filteredProject=projectsData.filter(({categoryName})=>{
+        return categoryName._id===activeCategory._id
+      })
+    }
   }
-  let allTags = catName(projectsData);
-console.log(allTags);
+$:activeCategory,filterProjectByCategory();
+// $:console.log(filteredProject);
+
 </script>
 
 <div
@@ -21,16 +31,18 @@ console.log(allTags);
     <div class="text-[2rem] font-[700] leading-[2.4rem] -tracking-[0.047rem]">
       latest projects.
     </div>
-    <div class=" flex flex-row-reverse">
-      {#each allTags as tag}
+    <div class=" flex flex-row">
+      {#each allCategory as category}
         <div class="px-[1rem]">
-          <button>{tag}</button>
+          <button on:click={()=>{
+            activeCategory=category
+          }}>{category.name}</button>
         </div>
       {/each}
     </div>
   </div>
   <div class="flex flex-row flex-wrap justify-center gap-[1rem] md:gap-[3rem]">
-    {#each projectsData as data}
+    {#each filteredProject as data}
       <ProjectCard projectCardData={data} />
     {/each}
   </div>

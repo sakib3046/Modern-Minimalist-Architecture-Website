@@ -13,15 +13,16 @@ const query = groq`
 			${asset('image')},
 		},
 		
-	"projects": *[_type == "landing.project"][]{
+	"projects": *[_type == "project"][]{
 		...,
-		project{
-        ...,
         categoryName->{
           ...,
         },
 		${asset('image')},
-	}
+	},
+	"category": *[_type == "category"][]{
+		_id,
+		name
 	}
 	}`;
 

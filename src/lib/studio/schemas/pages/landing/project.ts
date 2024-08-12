@@ -1,14 +1,10 @@
 import { defineField, defineType } from 'sanity';
 
 const project = defineType({
-  name: 'landing.project',
+  name: 'project',
   title: 'Projects',
   type: 'document',
-  fields: [
-    defineField({
-      name: 'project',
-      type: 'object',
-      fields: [
+  fields:[
         defineField({
           name: 'title',
           type: 'string',
@@ -42,8 +38,6 @@ const project = defineType({
           validation: (Rule) => Rule.required(),
         }),
       ],
-    }),
-  ],
 });
 
 export default project;

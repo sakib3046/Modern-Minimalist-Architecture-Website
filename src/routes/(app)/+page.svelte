@@ -8,9 +8,10 @@
     site: {
       logos: { ogImage },
     },
-    page: { sections },
+    page: { sections,category,projects },
   } = data);
-  // $:console.log(data)
+  $:console.log(projects);
+  
 </script>
 
 <div class="w-full">
@@ -20,7 +21,7 @@
     {/if}
   {/each}
   {#if !!Projects?.length}
-    <Projects projectsData={data.page.projects} />
+    <Projects projectsData={projects} category={category}/>
   {/if}
   {#each sections as props}
     {#if props._type === 'landing.about'}
