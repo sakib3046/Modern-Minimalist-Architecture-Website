@@ -16,7 +16,9 @@ const query = groq`
 	"projects": *[_type == "project"][]{
 		...,
         categoryName->{
-          ...,
+			_id, 
+    		_type,
+    		name
         },
 		${asset('image')},
 	},

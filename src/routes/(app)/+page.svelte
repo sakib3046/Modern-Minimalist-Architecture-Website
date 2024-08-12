@@ -10,7 +10,6 @@
     },
     page: { sections,category,projects },
   } = data);
-  $:console.log(projects);
   
 </script>
 
