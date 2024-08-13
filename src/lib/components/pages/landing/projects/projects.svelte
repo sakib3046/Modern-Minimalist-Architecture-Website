@@ -28,7 +28,7 @@
 <div
   class="flex w-full flex-col justify-center px-[0.938rem] py-[3.956rem] md:px-[2.5rem] md:py-[7.956rem] xl:px-[20rem]">
   <div class="flex flex-row justify-between">
-    <div class="flex flex-col sm:flex-row">
+    <div class="flex w-full flex-col sm:flex-row justify-between">
       <div class="text-[2rem] font-[700] leading-[2.4rem] -tracking-[0.047rem]">
         latest projects.
       </div>
@@ -44,7 +44,7 @@
           </div>
         {/each}
       </div>
-      <div class="relative sm:hidden">
+      <div class="sm:relative sm:hidden">
         <select
           class="border-black/0.2 mt-[1.5rem] w-full appearance-none border-[1px] bg-white p-[0.5rem]"
           bind:value={activeCategory}>
@@ -61,7 +61,8 @@
       <ProjectCard projectCardData={data} />
     {/each}
   </div>
-  <div class="w-full pt-[4rem] text-[1.25rem] font-[500] leading-[1.875rem] xl:pl-[5rem]">
+  <div
+    class="w-full pt-[4rem] text-[1.25rem] font-[500] leading-[1.875rem] xl:pl-[5rem]">
     <a href="/projects">view all projects.</a>
   </div>
 </div>
