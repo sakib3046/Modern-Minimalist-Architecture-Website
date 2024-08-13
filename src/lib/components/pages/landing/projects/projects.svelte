@@ -44,7 +44,7 @@
           </div>
         {/each}
       </div>
-      <div class="sm:relative sm:hidden">
+      <div class="relative sm:hidden">
         <select
           class="border-black/0.2 mt-[1.5rem] w-full appearance-none border-[1px] bg-white p-[0.5rem]"
           bind:value={activeCategory}>
@@ -52,7 +52,7 @@
             <option value={category}>{category.name}</option>
           {/each}
         </select>
-        <div class="absolute right-[0.5rem] top-[35px]"><ChevronDown /></div>
+        <div class="absolute right-[0.5rem] top-[35px] sm:hidden"><ChevronDown /></div>
       </div>
     </div>
   </div>
