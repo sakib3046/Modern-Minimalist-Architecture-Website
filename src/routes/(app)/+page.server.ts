@@ -12,8 +12,21 @@ const query = groq`
 			...,
 			${asset('image')},
 		},
+		
+	"projects": *[_type == "project"][]{
+		...,
+        categoryName->{
+			_id, 
+    		_type,
+    		name
+        },
+		${asset('image')},
+	},
+	"category": *[_type == "category"][]{
+		_id,
+		name
 	}
-`;
+	}`;
 
 export const load: PageServerLoad = async () => {
   const data: LandingPageProps = await sanityClient.fetch(query);

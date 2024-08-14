@@ -1,27 +1,26 @@
 import type { SanityImageObject } from '@sanity/image-url/lib/types/types';
 import type { Link, SeoProps } from './common.types';
 import type { PortableTextBlock } from '@portabletext/types';
-
+import type { Projects } from '$lib/types/projects';
 
 export interface LandingPageProps {
-  _rev:       string;
-  _type:      string;
-  _id:        string;
-  seo:        SeoProps;
+  _rev: string;
+  _type: string;
+  _id: string;
+  seo: SeoProps;
   _updatedAt: Date;
-  sections:   Section[];
+  projects: Projects[];
+  sections: Section[];
+  category: Category[];
   _createdAt: Date;
-
 }
 
-type Section = 
-              |Header 
-              |About
-              |Testimonial
-
-              
-
-
+export interface Category {
+  _id: string;
+  name: string;
+  _type: 'category';
+}
+type Section = Header | About | Testimonial;
 export interface HeroProps {
   _type: 'landing.hero';
   title: PortableTextBlock[];
@@ -30,49 +29,45 @@ export interface HeroProps {
 }
 
 export interface Header {
-  sliderImage:     SanityImageObject[];
-  headerText:      PortableTextBlock[];
-  _type:           'landing.header';
+  sliderImage: SanityImageObject[];
+  headerText: PortableTextBlock[];
+  _type: 'landing.header';
   sliderImageText: string[];
-  _key:            string;
+  _key: string;
 }
-
 
 export interface About {
-  title:         string;
+  title: string;
   projectstatus: Projectstatus[];
-  sliderImage:   SanityImageObject[];
-  _type:         'landing.about';
-  description:   string;
-  _key:          string;
+  sliderImage: SanityImageObject[];
+  _type: 'landing.about';
+  description: string;
+  _key: string;
 }
-export type AboutCard={
-  count:string
-title_p1: string
-title_p2 : string
-_key : string
-} 
+export type AboutCard = {
+  count: string;
+  title_p1: string;
+  title_p2: string;
+  _key: string;
+};
 
 export interface Projectstatus {
   title_p1: string;
   title_p2: string;
-  count:    string;
-  _key:     string;
+  count: string;
+  _key: string;
 }
-
-
-
 
 export interface Testimonial {
   sectionTitle: string;
-  _type:        'landing.testimonial';
-  _key:         string;
-  testimonial:  TestimonialElement[];
+  _type: 'landing.testimonial';
+  _key: string;
+  testimonial: TestimonialElement[];
 }
 
 export interface TestimonialElement {
-  clientRole:  string;
-  clientName:  string;
-  _key:        string;
+  clientRole: string;
+  clientName: string;
+  _key: string;
   testimonial: string;
 }
