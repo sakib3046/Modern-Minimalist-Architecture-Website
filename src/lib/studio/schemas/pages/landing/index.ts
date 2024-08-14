@@ -1,4 +1,8 @@
+import about from './about';
+import category from './category';
 import landingPage from './document';
-import hero from './hero.tsx';
+import header from './header';
+import project from './project';
+import testimonail from './testimonial';
 
-export default [landingPage, hero];
+export default [landingPage, header, project, about, testimonail, category];

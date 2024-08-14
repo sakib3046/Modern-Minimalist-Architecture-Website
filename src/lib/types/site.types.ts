@@ -5,12 +5,17 @@ export interface SiteDataProps {
   logos: {
     favicon: SanityImageWithAlt;
     ogImage: SanityImageWithAlt;
-    logo: SanityImageWithAlt;
+    logoText: LogoText;
   };
   nav: Nav;
   footer: Footer;
   greetings: Greetings;
 }
+
+export type LogoText = {
+  name: string;
+  _type: string;
+};
 
 export type Greetings = SanityDocument & { greetings: string[] };
 
@@ -24,28 +29,34 @@ export interface Nav {
 }
 
 export interface Footer {
-  title: string;
-  subtitle: string;
-  contacts: Contact[];
-  social: SocialProps;
-}
-
-export interface SocialProps {
-  title: string;
-  socials: Social[];
-}
-
-export interface Contact {
   _type: string;
-  _key: string;
+  portfolios: Portfolios;
+  _id: string;
+  title: string;
+  sections: Sections;
+  social: Social;
+  _rev: string;
+  _updatedAt: Date;
+  _createdAt: Date;
+  CopyWriteInfo: string[];
+}
+
+export interface Portfolios {
+  portfolios: Portfolio[];
+}
+
+export interface Portfolio {
+  _type: string;
   name: string;
-  value: string;
-  url?: string;
+  _key: string;
+  url: string;
+}
+
+export interface Sections {
+  section: Portfolio[];
 }
 
 export interface Social {
-  _type: string;
-  _key: string;
-  name: string;
-  url: string;
+  socials: Portfolio[];
+  title: string;
 }

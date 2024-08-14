@@ -1,5 +1,5 @@
 import { FaRegStar } from 'react-icons/fa';
-import type { Rule } from 'sanity';
+ import type { Rule } from 'sanity';
 
 const siteLogo = {
   name: 'site.logos',
@@ -7,27 +7,32 @@ const siteLogo = {
   type: 'document',
   icon: FaRegStar,
   fields: [
-    {
-      name: 'logo',
-      type: 'image',
-      validation: (Rule: Rule) => Rule.required(),
-    },
 
-    {
-      name: 'favicon',
-      title: 'Favicon',
-      type: 'image',
-      validation: (Rule: Rule) => Rule.required(),
-    },
-    {
-      name: 'ogImage',
-      title: 'Default SEO Image',
-      type: 'image',
-      options: {
-        accept: 'image/png, image/jpeg, image/webp',
+      {
+        name:'logoTextPrimary',
+        type:'string',
+        validation: (Rule: Rule) => Rule.required(),
       },
-      validation: (Rule: Rule) => Rule.required(),
-    },
+      {
+        name:'logoTextSecondary',
+        type:'string',
+      }
+
+    // {
+    //   name: 'favicon',
+    //   title: 'Favicon',
+    //   type: 'image',
+    //   validation: (Rule: Rule) => Rule.required(),
+    // },
+    // {
+    //   name: 'ogImage',
+    //   title: 'Default SEO Image',
+    //   type: 'image',
+    //   options: {
+    //     accept: 'image/png, image/jpeg, image/webp',
+    //   },
+    //   validation: (Rule: Rule) => Rule.required(),
+    // },
   ],
   preview: {
     prepare: () => ({

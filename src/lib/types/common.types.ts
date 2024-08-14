@@ -22,7 +22,9 @@ export type SanityImageWithAlt = SanityImageObject & {
   alt: string;
 };
 
-export interface Video {
-  mov: string;
-  webm: string;
-}
+
+
+
+
+
+

@@ -1,9 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  font-family: "Space Grotesk", sans-serif;
+}
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+
+
+
+@layer components{
+
+}
+
 
 @layer base {
 }
 
 @layer utilities {
+
+.mdxlScreenHeading{
+    @apply text-[1.75rem] leading-[2.625rem] font-[400]
+    }
+.smScreenHeading{
+  @apply text-[1.25rem] leading-[1.875rem] font-[400]
+}
+.mdxlScreenAbout{
+    @apply text-[1.25rem] leading-[1.875rem] font-[400]
+}
+.mdxlScreenTestimonial{
+    @apply text-[1.5rem] leading-[2.25rem] font-[400]
+}
+
 }

@@ -3,5 +3,6 @@ import link from './link';
 import social from './social';
 import pages from './pages';
 import site from './site';
+import sectionAddr from './sectionAddr';
 
-export const schemaTypes = [social, seo, link, ...site, ...pages];
+export const schemaTypes = [sectionAddr,social, seo, link, ...site, ...pages];
